@@ -8,5 +8,42 @@
 </head>
 <body>
     <h1> My First Test </h1>
+    <input type="text" name="firstName">
+    <input type="text" name="email">
+    <input type="password" name="password">
+    <input type="text" name="city">
+    <input type="submit" value="Signup" id="submit-button">
+    <div id="confirmation-message"></div>
+
+    <script>
+
+        const emailInput= document.querySelector('input[name=email]')
+        const cityInput= document.querySelector('input[name=city]')
+        const button = document.getElementById('submit-button')
+        const messageElement = document.getElementById('confirmation-message')
+
+        button.addEventListener('click',()=>{
+
+            if (emailInput.value === '') {
+                messageElement.innerText='Email is required!'
+
+                // Nested if conditions, if user leave more form fields.
+
+                if(cityInput.value === '' && emailInput.value === '')
+                messageElement.innerText='Please fill out all the fields!'
+                
+            } 
+
+
+ 
+            else{
+
+           messageElement.innerText= 'thank you for signing up!' 
+        }
+
+
+        })
+    </script>
+
 </body>
 </html>
