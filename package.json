@@ -5,6 +5,12 @@
   "license": "MIT",
   "devDependencies": {
     "cypress": "^8.7.0",
+    "jsdom": "18.0.1",
+    "jsdom-global": "3.0.2",
     "superstatic": "^7.1.0"
+  },
+  "scripts": {
+    "start": "superstatic src",
+    "test": "cypress open"
   }
 }
